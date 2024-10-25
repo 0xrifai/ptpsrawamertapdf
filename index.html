@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive PDF View</title>
+  <style>
+    /* Style untuk halaman utama */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+    }
+
+    /* Container PDF */
+    .pdf-container {
+      width: 100%;
+      max-width: 800px; /* Maksimal lebar di layar besar */
+      height: 90vh; /* Tinggi fleksibel untuk berbagai ukuran layar */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    /* Iframe untuk PDF */
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Responsif untuk layar kecil */
+    @media (max-width: 768px) {
+      .pdf-container {
+        width: 100%;
+        height: 80vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pdf-container">
+    <iframe src="pengumumanhasil.pdf" title="PDF Viewer"></iframe>
+  </div>
+</body>
+</html>
